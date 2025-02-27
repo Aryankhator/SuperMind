@@ -181,7 +181,7 @@ struct SectionView: View {
                     }label: {
                         Text("See All")
                             .font(.system(size: 16, weight: .regular))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.gray)
                     }
                 }
             }

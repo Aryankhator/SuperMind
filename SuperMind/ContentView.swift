@@ -26,6 +26,7 @@ struct ContentView: View {
         appearance.stackedLayoutAppearance.normal.iconColor = UIColor.gray
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.gray]
         UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
     }
     
     

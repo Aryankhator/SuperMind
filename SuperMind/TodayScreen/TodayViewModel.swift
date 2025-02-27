@@ -3,7 +3,7 @@
 // ExploreViewModel.swift
 // SuperMind
 //
-// Created by Nand on 27/02/25
+// Created by Aryan on 27/02/25
 //
         
 
