@@ -1,11 +1,11 @@
 //
 //
-// ExploreView.swift
+// TodayView.swift
 // SuperMind
 //
 // Created by Aryan on 27/02/25
 //
-        
+
 
 import SwiftUI
 
@@ -20,5 +20,5 @@ struct ExploreView: View {
 }
 
 #Preview {
-    ExploreView()
+    TodayView()
 }

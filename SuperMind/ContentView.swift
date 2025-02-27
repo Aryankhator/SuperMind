@@ -5,7 +5,7 @@
 //
 // Created by Aryan on 27/02/25
 //
-        
+
 
 import SwiftUI
 
@@ -17,29 +17,34 @@ enum Tab {
 
 struct ContentView: View {
     @State private var selectedTab: Tab = .today
-
+    
     init() {
-        UITabBar.appearance().unselectedItemTintColor = .gray
-        UITabBar.appearance().backgroundColor = .primary1
-        }
-
-
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = .primary1
+        appearance.stackedLayoutAppearance.selected.iconColor = .white
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.stackedLayoutAppearance.normal.iconColor = UIColor.gray
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.gray]
+        UITabBar.appearance().standardAppearance = appearance
+    }
+    
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             TodayView()
-            .tabItem {
+                .tabItem {
                     Image(systemName: "house.fill")
                     Text("Today")
                 }
                 .tag(Tab.today)
-
+            
             ExploreView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Explore")
                 }
                 .tag(Tab.explore)
-
+            
             YouView()
                 .tabItem {
                     Image(systemName: "person.circle")
@@ -47,6 +52,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.you)
         }
+        .tableStyle(.inset)
         .accentColor(.white)
     }
 }
